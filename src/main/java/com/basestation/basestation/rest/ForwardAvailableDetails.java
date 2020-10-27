@@ -14,7 +14,7 @@ import javax.persistence.GeneratedValue;
 @RestController
 @RequestMapping("forwardDetails")
 public class ForwardAvailableDetails{
-    @PostMapping()
+    @PostMapping("/avail")
     public JsonNode details(@RequestBody JsonNode jsonNode){
         System.out.println("Received JSON:"+jsonNode.toString());
         RestTemplate restTemplate = new RestTemplate();
@@ -31,7 +31,7 @@ public class ForwardAvailableDetails{
 
 
     }
-    @GetMapping()
+    @GetMapping("/sees")
     public String getty(){
         return "eqweqw";
     }
