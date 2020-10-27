@@ -17,5 +17,5 @@ public class BasestationApplication  extends SpringBootServletInitializer {
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(BasestationApplication.class);
 	}
-}	
+}
 
