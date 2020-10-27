@@ -6,16 +6,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import javax.persistence.GeneratedValue;
 
 @RestController
 @RequestMapping("forwardDetails")
 public class ForwardAvailableDetails{
-    @PostMapping
+    @PostMapping()
     public JsonNode details(@RequestBody JsonNode jsonNode){
         System.out.println("Received JSON:"+jsonNode.toString());
         RestTemplate restTemplate = new RestTemplate();
@@ -31,5 +30,9 @@ public class ForwardAvailableDetails{
         return responsePayload;
 
 
+    }
+    @GetMapping()
+    public String getty(){
+        return "eqweqw";
     }
 }
